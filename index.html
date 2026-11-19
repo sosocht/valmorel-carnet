@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carnet de voyage Valmorel</title>
+<meta name="description" content="Notre voyage de Lille à Valmorel : horaires, billets et frais.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E1A2B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+<section class="porte" id="porte" aria-labelledby="porte-titre">
+  <div class="porte-boite">
+    <img class="porte-logo" src="icon.svg" alt="" width="72" height="72">
+    <h1 id="porte-titre">Valmorel</h1>
+    <p class="texte">Entre le mot de passe pour ouvrir le carnet de voyage.</p>
+    <form class="formulaire" id="porte-form" autocomplete="off">
+      <input class="champ" id="mdp" type="password" placeholder="Mot de passe" aria-label="Mot de passe" autocomplete="current-password" required>
+      <button type="submit" class="btn btn-principal">Entrer</button>
+      <p class="erreur" id="erreur" role="alert"></p>
+    </form>
+  </div>
+</section>
+
+<div id="appli" hidden>
+  <header class="hero">
+    <div class="gouttiere">
+      <p class="label" id="hero-sous"></p>
+      <h1 id="hero-titre"></h1>
+      <p class="hero-grand" id="hero-grand"></p>
+      <p class="label" id="hero-petit"></p>
+    </div>
+  </header>
+
+  <nav class="onglets" aria-label="Parties du carnet">
+    <div class="gouttiere onglets-liste" role="tablist">
+      <button type="button" role="tab" class="onglet" data-onglet="aller" aria-selected="true">Aller</button>
+      <button type="button" role="tab" class="onglet" data-onglet="retour" aria-selected="false">Retour</button>
+      <button type="button" role="tab" class="onglet" data-onglet="argent" aria-selected="false">Argent</button>
+      <button type="button" role="tab" class="onglet" data-onglet="infos" aria-selected="false">Infos</button>
+    </div>
+  </nav>
+
+  <main class="gouttiere" id="contenu"></main>
+</div>
+
+<dialog id="visionneuse" class="visionneuse">
+  <div class="visionneuse-barre">
+    <p class="label" id="visionneuse-titre"></p>
+    <button type="button" class="btn btn-secondaire" id="visionneuse-fermer">Fermer</button>
+  </div>
+  <img id="visionneuse-img" alt="">
+</dialog>
+
+<script src="js/data.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>
