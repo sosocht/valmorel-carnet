@@ -235,7 +235,7 @@
   function recupere(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.arrayBuffer(); }); }
 
   function deverrouiller(mdp, zoneErreur) {
-    if (zoneErreur) zoneErreur.textContent = 'Vérification…';
+    if (zoneErreur) zoneErreur.textContent = 'Vérif’s…';
     return fetch('data/meta.json').then(function (r) { return r.json(); })
       .then(function (meta) { return deriver(mdp, meta); })
       .then(function (k) { cle = k; return recupere('data/secret.enc'); })
