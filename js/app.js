@@ -194,7 +194,7 @@
       b.appendChild(lien('Appeler ' + a.tel, 'tel:' + a.tel.replace(/\s/g, ''), 'btn-secondaire btn-petit'));
       main.appendChild(b);
     }
-    main.appendChild(bouton('Verrouiller le carnet sur cet appareil', 'btn-secondaire', verrouiller));
+    main.appendChild(bouton('Verrouiller le carn’s sur cet appareil', 'btn-secondaire', verrouiller));
   }
 
   function choisirOnglet(nom) {
@@ -254,7 +254,7 @@
         cle = null; secret = null;
         document.getElementById('porte').hidden = false;
         document.getElementById('appli').hidden = true;
-        if (zoneErreur) zoneErreur.textContent = 'Ce n’est pas le bon mot de passe.';
+        if (zoneErreur) zoneErreur.textContent = 'Mauvais mot de pass’s, c’est le binz. Réessaie, Gadz’Arts.';
         return false;
       });
   }

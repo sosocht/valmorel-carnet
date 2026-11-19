@@ -1,6 +1,6 @@
 /* Service worker : garde le carnet et les billets chiffrés pour les ouvrir sans connexion. */
-const V = 'carnet-v2';
-const BASE = ['./', 'index.html', 'css/style.css?v=4', 'js/data.js?v=4', 'js/app.js?v=4', 'manifest.webmanifest', 'icon.svg', 'data/meta.json', 'data/secret.enc'];
+const V = 'carnet-v3';
+const BASE = ['./', 'index.html', 'css/style.css?v=5', 'js/data.js?v=5', 'js/app.js?v=5', 'manifest.webmanifest', 'icon.svg', 'data/meta.json', 'data/secret.enc'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => Promise.all(BASE.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V && k !== 'carnet-fichiers-v1').map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
